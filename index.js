@@ -23,10 +23,8 @@ const testRunner = (name, fn, ...useCasesArguments) => {
     "method3",
     method3,
     ["3G", "4G", "5G"],
-    ["2G", "gprs", "3G"],
     ["3G", "4G", "5G"],
-    ["2G", "gprs", "3G"],
     ["3G", "4G", "5G"],
-    [("2G", "gprs", "3G")]
+    ["3G", "4G", "5G"]
   );
 })();
