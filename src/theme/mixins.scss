@@ -12,3 +12,10 @@
     margin-right: auto;
   }
 }
+
+@mixin content-max-width-page {
+  @include content-max-width;
+  @media screen and (min-width: $bp-tablet) {
+    max-width: min(1120px, 70%);
+  }
+}

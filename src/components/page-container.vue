@@ -7,7 +7,7 @@
 <style lang="scss" scoped>
 @import "../theme/mixins.scss";
 .page-container {
-  @include content-max-width;
+  @include content-max-width-page;
   margin-top: 48px;
   margin-bottom: 66px;
 }

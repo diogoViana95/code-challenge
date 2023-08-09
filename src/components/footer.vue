@@ -177,7 +177,7 @@ import Link from "./link.vue";
     }
 
     @media screen and (min-width: $bp-desktop) {
-      padding: 0 64px;
+      padding-right: 64px;
       grid-template-columns: repeat(4, 1fr);
       > :first-child {
         grid-column: unset;
@@ -185,7 +185,6 @@ import Link from "./link.vue";
     }
 
     @media screen and (min-width: $bp-desktop-lg) {
-      padding: 0 64px;
       grid-template-columns: 390px repeat(3, 1fr);
     }
 
