@@ -13,15 +13,14 @@
   </PageContainer>
 </template>
 <script lang="ts" setup>
+import { BlogsApi } from "../api/blogs.api";
+import BlogCard from "../components/blog-card.vue";
 import Link from "../components/link.vue";
 import PageContainer from "../components/page-container.vue";
 import { t } from "../i18n";
-import { Blog } from "../models";
-import { BlogsApi } from "../api/blogs.api";
-import BlogCard from "../components/blog-card.vue";
 const api = new BlogsApi();
 
-const blogs: Blog[] = api.getAll();
+const blogs = api.getAll();
 </script>
 <style lang="scss" scoped>
 @import "../theme/breakpoints.scss";

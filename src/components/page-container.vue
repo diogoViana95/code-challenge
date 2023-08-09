@@ -9,5 +9,6 @@
 .page-container {
   @include content-max-width;
   margin-top: 48px;
+  margin-bottom: 66px;
 }
 </style>
