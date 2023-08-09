@@ -67,7 +67,7 @@ onMounted(async () => {
     .view-all-link-header {
       display: none;
       @media screen and (min-width: $bp-tablet) {
-        display: initial;
+        display: flex;
       }
     }
   }
