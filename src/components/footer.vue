@@ -158,7 +158,7 @@ import Link from "./link.vue";
   justify-content: flex-start;
   align-items: stretch;
   gap: 48px;
-  @media screen and (min-width: $bp-tablet-sm) {
+  @media screen and (min-width: $bp-tablet) {
     padding-left: 32px;
     padding-right: 32px;
     max-width: min(1220px, 80%);
@@ -170,7 +170,7 @@ import Link from "./link.vue";
     justify-content: flex-start;
     gap: 32px;
 
-    @media screen and (min-width: $bp-tablet-sm) {
+    @media screen and (min-width: $bp-tablet) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 64px;
@@ -185,6 +185,11 @@ import Link from "./link.vue";
       > :first-child {
         grid-column: unset;
       }
+    }
+
+    @media screen and (min-width: $bp-desktop-lg) {
+      padding: 0 64px;
+      grid-template-columns: 390px repeat(3, 1fr);
     }
 
     .content {
