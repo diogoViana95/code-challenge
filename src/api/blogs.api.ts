@@ -1,7 +1,8 @@
 import { Blog } from "../models";
 
 export class BlogsApi {
-  getAll(): Blog[] {
+  async getAll(): Promise<Blog[]> {
+    await new Promise((resolve) => setTimeout(resolve, 5000));
     return [
       {
         id: "1",

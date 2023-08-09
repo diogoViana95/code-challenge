@@ -7,20 +7,41 @@
       }}</Link>
     </div>
     <div class="blog-list">
-      <BlogCard v-for="blog in blogs" :key="blog.id" :blog="blog" />
+      <template v-if="!loading">
+        <BlogCard v-for="blog in blogs" :key="blog.id" :blog="blog" />
+      </template>
+      <template v-else>
+        <Skeleton class="loading" />
+        <Skeleton class="loading" />
+        <Skeleton class="loading" />
+        <Skeleton class="loading" />
+      </template>
     </div>
     <Link class="view-all-link" to="#viewAll">{{ t("home.viewAll") }}</Link>
   </PageContainer>
 </template>
 <script lang="ts" setup>
+import { onMounted, ref } from "vue";
 import { BlogsApi } from "../api/blogs.api";
 import BlogCard from "../components/blog-card.vue";
 import Link from "../components/link.vue";
 import PageContainer from "../components/page-container.vue";
 import { t } from "../i18n";
+import { Blog } from "../models";
+import Skeleton from "../components/skeleton.vue";
 const api = new BlogsApi();
 
-const blogs = api.getAll();
+const loading = ref(true);
+const blogs = ref<Blog[]>([]);
+
+onMounted(async () => {
+  try {
+    blogs.value = await api.getAll();
+    loading.value = false;
+  } catch (error) {
+    console.error(error);
+  }
+});
 </script>
 <style lang="scss" scoped>
 @import "../theme/breakpoints.scss";
@@ -61,6 +82,11 @@ const blogs = api.getAll();
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 24px;
+
+    .loading {
+      border-radius: 8px;
+      height: 400px;
+    }
   }
 }
 </style>

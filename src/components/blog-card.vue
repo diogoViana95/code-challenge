@@ -34,7 +34,7 @@ const blogPage = computed(() => `/blog/${props.blog.id}`);
   gap: 24px;
   justify-content: flex-start;
   align-items: flex-start;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
   overflow: hidden;
   .blog-content {
     display: flex;
