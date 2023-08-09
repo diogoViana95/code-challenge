@@ -1,0 +1,14 @@
+@import "./breakpoints.scss";
+
+@mixin content-max-width {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  @media screen and (min-width: $bp-tablet) {
+    max-width: min(1220px, 80%);
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -150,20 +150,17 @@ import Link from "./link.vue";
 @import "../theme/colors.scss";
 @import "../theme/fonts.scss";
 @import "../theme/breakpoints.scss";
+@import "../theme/mixins.scss";
 .app-footer {
   margin-top: auto;
-  padding: 142px 16px 28px;
+  @include content-max-width;
+  padding-top: 140px;
+  padding-bottom: 28px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
   gap: 48px;
-  @media screen and (min-width: $bp-tablet) {
-    padding-left: 32px;
-    padding-right: 32px;
-    max-width: min(1220px, 80%);
-    margin: auto auto 0;
-  }
   .links {
     display: flex;
     flex-direction: column;

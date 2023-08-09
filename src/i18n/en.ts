@@ -34,6 +34,13 @@ const en = {
       instagram: "Instagram",
     },
   },
+  home: {
+    title: "Lorem ipsum Neque est",
+    viewAll: "View all",
+  },
+  blogCard: {
+    button: "Read more",
+  },
 };
 
 export default en;
