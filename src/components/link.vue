@@ -41,6 +41,10 @@ defineProps<{
   font-weight: 600;
   font-family: $fontLato;
   width: fit-content;
+  white-space: nowrap;
+  &:focus {
+    outline-color: $accent-red;
+  }
   .icon path {
     stroke: $accent-red;
   }

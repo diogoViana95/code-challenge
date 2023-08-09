@@ -1,7 +1,9 @@
 <template>
-  <Link to="#" arrow>HELLO WORLD </Link>
+  <Home />
+  <AppFooter />
 </template>
 <script lang="ts" setup>
-import Link from "./components/link.vue";
+import AppFooter from "./components/footer.vue";
+import Home from "./pages/home.vue";
 </script>
 <style lang="scss" scoped></style>

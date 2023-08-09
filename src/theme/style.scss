@@ -20,6 +20,12 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+}
+#app {
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
 }
 /*
     5. Improve media defaults
